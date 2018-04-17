@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# Checks wheter xcowsay is installed
+# Checks whether xcowsay is installed
 xcowsay -v > /dev/null
 if [ $? -ne 0 ]; then
 	printf 'Por obséquio, instale o xcowsay:\n\n$\tsudo apt install xcowsay\n\n';
 	exit 1;
 fi
 
+# So many possibilities
 declare -a fala=("Se o André fosse Sá seria uma quase mulher, AndréSá"
 		"Isso é uma vaca ou um cachorro com dois pênis?"
 		"Vocês gostam de banana? Nós gostamos de fazer neném!"
@@ -26,7 +27,6 @@ declare -a fala=("Se o André fosse Sá seria uma quase mulher, AndréSá"
 		"Amigo que não se lambusa não pede rodízio"
 		)
 
+# Pick a random one and xcowsay it
 r=$((RANDOM % ${#fala[@]}))
 xcowsay "${fala[$r]}"
-
-
