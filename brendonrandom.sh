@@ -1,6 +1,14 @@
 #!/bin/bash
-declare -a fala=("Se o André fosse Sá seria uma quase mulher, AndréSá" 
-		"Isso é uma vaca ou um cachorro com dois pênis?" 
+
+# Checks wheter xcowsay is installed
+xcowsay -v > /dev/null
+if [ $? -ne 0 ]; then
+	printf 'Por obséquio, instale o xcowsay:\n\n$\tsudo apt install xcowsay\n\n';
+	exit 1;
+fi
+
+declare -a fala=("Se o André fosse Sá seria uma quase mulher, AndréSá"
+		"Isso é uma vaca ou um cachorro com dois pênis?"
 		"Vocês gostam de banana? Nós gostamos de fazer neném!"
 		"André da Silva, MEU AMIGÃO DO PEITO"
 		"Qual a relação, meu peitinho cru?"
@@ -15,6 +23,7 @@ declare -a fala=("Se o André fosse Sá seria uma quase mulher, AndréSá"
 		"Se pudermos ver um homem e um cachorro juntos, temos certeza de que eles irão, muito provavelmente, realizar práticas sexuais"
 		"Olá Anão, tá afim de ver um anime?"
 		"Se alguém roubar o seu telefone um dia, Gian, certamente foi um assaltante!"
+		"Amigo que não se lambusa não pede rodízio"
 		)
 
 r=$((RANDOM % ${#fala[@]}))
