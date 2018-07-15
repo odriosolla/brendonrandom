@@ -25,6 +25,7 @@ declare -a fala=("Se o André fosse Sá seria uma quase mulher, AndréSá"
 		"Olá Anão, tá afim de ver um anime?"
 		"Se alguém roubar o seu telefone um dia, Gian, certamente foi um assaltante!"
 		"Amigo que não se lambusa não pede rodízio"
+        "eu adoro ter 4 coisas abertas ao mesmo tempo"
 		)
 
 # Pick a random one and xcowsay it
